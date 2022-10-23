@@ -19,9 +19,6 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    Log::channel('db')->error('My error/exception msg', ['log_url' => '/dashboard']);
-    
-    dd('Error Message logged to "message_log" table');
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
